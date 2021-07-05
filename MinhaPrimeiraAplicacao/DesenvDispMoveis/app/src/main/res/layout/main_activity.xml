@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/txMin"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:ems="10"
+            android:hint="1"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="Entre com o intervalo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txMax"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="52dp"
+            android:ems="10"
+            android:hint="100"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/btSortear"
+            android:layout_width="119dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="76dp"
+            android:onClick="SortearNumero"
+            android:text="SORTEAR"
+            app:layout_constraintEnd_toStartOf="@+id/txMax"
+            app:layout_constraintHorizontal_bias="0.628"
+            app:layout_constraintStart_toEndOf="@+id/txMin"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:rippleColor="#B14444" />
+
+        <TextView
+            android:id="@+id/txSorteio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Nenhum número selecionado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btSortear" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
